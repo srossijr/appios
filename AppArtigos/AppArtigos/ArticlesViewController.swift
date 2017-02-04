@@ -11,9 +11,14 @@ import UIKit
 
 class ArticlesViewController: UIViewController {
 
+    var dataProvider = ArticlesDataProvider()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.dataProvider.getAllArticles()
+        
     }
 
     override func didReceiveMemoryWarning() {

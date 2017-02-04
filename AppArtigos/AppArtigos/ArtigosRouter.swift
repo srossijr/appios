@@ -6,43 +6,42 @@
 ////  Copyright © 2017 impacta. All rights reserved.
 ////
 //
-//import Foundation
-//import Alamofire
-//
-//    enum ArtigosRouter: URLRequestConvertible {
-////    /// Returns a URL request or throws if an `Error` was encountered.
-////    ///
-////    /// - throws: An `Error` if the underlying `URLRequest` is `nil`.
-////    ///
-////    /// - returns: A URL request.
-////    public func asURLRequest() throws -> URLRequest {
-////        let url = URL(string: "baseURL")
-////        
-////        var urlRequest = URLRequest(url: (url?.appendingPathComponent(path))!)
-////        urlRequest.httpMethod = method.rawValue
-////        
-////        switch self {
-////        case .getArtgos():
-////            return try Alamofire.JSONEncoding.default.encode(urlRequest)
-////        }
-////    }
-////
-////  
-////    case getArtgos()
-////
-////    var method: Alamofire.HTTPMethod {
-////        
-////        switch self {
-////        case .getArtgos():
-////            return .get
-////        }
-////    }
-//// 
-////    var path: String {
-////        switch self {
-////        case .getArtgos():
-////            return ""
-////        }
-////    }
-//        
-//}
+import Foundation
+import Alamofire
+
+enum ArtigosRouter: URLRequestConvertible {
+
+    case getAllArticles(idUser: String)
+
+    var method: Alamofire.HTTPMethod {
+        switch self {
+        case .getAllArticles:
+             return .get
+        }
+    }
+
+    var path: String {
+        switch self {
+        case .getAllArticles:
+            return API.getArticles
+        }
+    }
+
+    func asURLRequest() throws -> URLRequest {
+         var url = URL(string: API.baseURL)!
+         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+
+         switch self {
+         case .getAllArticles(let idUser):
+
+            var parameters = String(describing: urlRequest)
+            parameters = parameters.replacingOccurrences(of: "$$", with: idUser)
+            parameters = parameters.replacingOccurrences(of: "%3F", with: "?")
+            url = URL(string: parameters)!
+            urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = method.rawValue
+            return try Alamofire.JSONEncoding.default.encode(urlRequest)
+        }
+    }
+}
+

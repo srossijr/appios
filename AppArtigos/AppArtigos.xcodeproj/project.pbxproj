@@ -12,6 +12,10 @@
 		3A5821F21E3CDCA300CB59E2 /* ArticlesDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5821F11E3CDCA300CB59E2 /* ArticlesDataProvider.swift */; };
 		3A5821F41E3CDCCB00CB59E2 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5821F31E3CDCCB00CB59E2 /* BaseProtocol.swift */; };
 		3A5821F61E3CE2FC00CB59E2 /* ArticlesViewController+ArticlesDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5821F51E3CE2FC00CB59E2 /* ArticlesViewController+ArticlesDataProvider.swift */; };
+		3A6E3D721E462A6F00EDA2C9 /* ArticlesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E3D711E462A6F00EDA2C9 /* ArticlesStore.swift */; };
+		3A6E3D741E462EF000EDA2C9 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E3D731E462EF000EDA2C9 /* Account.swift */; };
+		3A6E3D761E46301A00EDA2C9 /* ArticlesApiStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E3D751E46301A00EDA2C9 /* ArticlesApiStore.swift */; };
+		3A6E3D781E46491800EDA2C9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E3D771E46491800EDA2C9 /* API.swift */; };
 		3AF8CAA21E33E13D001C647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8CAA11E33E13D001C647D /* AppDelegate.swift */; };
 		3AF8CAA41E33E13D001C647D /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8CAA31E33E13D001C647D /* ArticlesViewController.swift */; };
 		3AF8CAA71E33E13D001C647D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF8CAA51E33E13D001C647D /* Main.storyboard */; };
@@ -48,6 +52,10 @@
 		3A5821F11E3CDCA300CB59E2 /* ArticlesDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticlesDataProvider.swift; path = DataProvider/ArticlesDataProvider.swift; sourceTree = "<group>"; };
 		3A5821F31E3CDCCB00CB59E2 /* BaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
 		3A5821F51E3CE2FC00CB59E2 /* ArticlesViewController+ArticlesDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ArticlesViewController+ArticlesDataProvider.swift"; sourceTree = "<group>"; };
+		3A6E3D711E462A6F00EDA2C9 /* ArticlesStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesStore.swift; sourceTree = "<group>"; };
+		3A6E3D731E462EF000EDA2C9 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		3A6E3D751E46301A00EDA2C9 /* ArticlesApiStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesApiStore.swift; sourceTree = "<group>"; };
+		3A6E3D771E46491800EDA2C9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		3AF8CA9E1E33E13D001C647D /* AppArtigos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppArtigos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF8CAA11E33E13D001C647D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AF8CAA31E33E13D001C647D /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +182,7 @@
 		3AF8CACF1E33E208001C647D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3A6E3D731E462EF000EDA2C9 /* Account.swift */,
 				3AF8CAD01E33E214001C647D /* Articles.swift */,
 				3AF8CAD11E33E214001C647D /* BaseClass.swift */,
 			);
@@ -185,6 +194,7 @@
 			children = (
 				3AF8CAD61E33E436001C647D /* Store */,
 				3AF8CAD51E33E42C001C647D /* Routers */,
+				3A6E3D771E46491800EDA2C9 /* API.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -200,6 +210,8 @@
 		3AF8CAD61E33E436001C647D /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				3A6E3D711E462A6F00EDA2C9 /* ArticlesStore.swift */,
+				3A6E3D751E46301A00EDA2C9 /* ArticlesApiStore.swift */,
 			);
 			name = Store;
 			sourceTree = "<group>";
@@ -407,15 +419,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6E3D721E462A6F00EDA2C9 /* ArticlesStore.swift in Sources */,
+				3A6E3D741E462EF000EDA2C9 /* Account.swift in Sources */,
 				3AF8CAA41E33E13D001C647D /* ArticlesViewController.swift in Sources */,
 				3A5821F61E3CE2FC00CB59E2 /* ArticlesViewController+ArticlesDataProvider.swift in Sources */,
 				3A5821F21E3CDCA300CB59E2 /* ArticlesDataProvider.swift in Sources */,
 				3A5821F41E3CDCCB00CB59E2 /* BaseProtocol.swift in Sources */,
 				3AF8CAD21E33E214001C647D /* Articles.swift in Sources */,
 				3AF8CAD81E33E51D001C647D /* ArtigosRouter.swift in Sources */,
+				3A6E3D781E46491800EDA2C9 /* API.swift in Sources */,
 				3AF8CAA21E33E13D001C647D /* AppDelegate.swift in Sources */,
 				3AF8CAD31E33E214001C647D /* BaseClass.swift in Sources */,
 				3A5821EF1E3CD8E100CB59E2 /* LoadingView.swift in Sources */,
+				3A6E3D761E46301A00EDA2C9 /* ArticlesApiStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,4 +7,5 @@ target 'AppArtigos' do
 	pod 'SwiftyJSON', '~> 3.1'
 	pod 'Alamofire', '~> 4.3'
 	pod 'ALLoadingView', '~> 1.1'
+       pod 'ASProgressHud', '~> 1.0'
 end

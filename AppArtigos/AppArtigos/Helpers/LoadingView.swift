@@ -8,6 +8,7 @@
 
 import Foundation
 import ALLoadingView
+import ASProgressHud
 
 
 class LoadingView {
@@ -26,8 +27,18 @@ class LoadingView {
     
     static func hideLoadin() {
         
+        ALLoadingView.manager.cancelCallback = {
          ALLoadingView.manager.hideLoadingView()
+        }
+    }
+    
+    static func isLoading(view: UIView, show: Bool){
+        if show{
+            ASProgressHud.showHUDAddedTo(view, animated: true, type: .default)
+        }else{
+            ASProgressHud.hideHUDForView(view, animated: true)
         
+        }
     }
     
     
