@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8C73A06158895DD16F5DCA7C947C206F'
-               BlueprintName = 'SwiftyJSON'
+               BlueprintIdentifier = 'FE0EA4A854B31B97AB23A6135FCBFABD'
+               BlueprintName = 'CircleMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyJSON.framework'>
+               BuildableName = 'CircleMenu.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
